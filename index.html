@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 6</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    #loadingspinner{
+      display:none;
+    }
+    </style>
+</head>
+<body>
+
+    <h2 class="text-center text-danger mt-2">Search Your Favourite Books</h2>
+   <!-- search field for books -->
+    <div class="input-group mb-3 w-50 mx-auto mt-3">
+        <input type="text" class="form-control" placeholder="Search your favorite books..." aria-label="Recipient's username" aria-describedby="button-addon2" id="input-text">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" onclick="loadData()">Search</button>
+        </div>
+      </div>
+      <!-- loading spinnners... -->
+      <div class="mx-auto w-25 ms-5" id="loadingspinner">
+        <button class="btn btn-primary " type="button" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+      </div>
+
+      <!-- display error message -->
+      <div class="mx-auto w-25">
+        <p id="error-message" class=" text-danger">Something went wrong please try again later</p>
+        <p id="error-resilt"></p>
+    </div>
+
+     
+      <!-- displaying total number of result -->
+      <p class="text-center" id="result-total"></p>
+       
+      <!-- displaying search result from api -->
+
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="display-data">
+       
+       
+      </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
